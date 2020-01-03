@@ -1,4 +1,4 @@
-import App from './components/Card/index.svelte'
+import App from './components/Card.svelte'
 
 const app = new App({
 	target: document.body,
