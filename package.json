@@ -16,5 +16,9 @@
     "sass": "^1.24.1",
     "svelte": "^3.16.7"
   },
-  "dependencies": {}
+  "dependencies": {
+    "apollo-boost": "^0.4.7",
+    "graphql": "^14.5.8",
+    "graphql-tag": "^2.10.1"
+  }
 }
