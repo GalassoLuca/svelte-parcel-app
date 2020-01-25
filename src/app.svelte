@@ -1,9 +1,9 @@
 <script>
-  import Card from "./components/Card.svelte"
+  import Title from "./components/Title.svelte"
   import Promise from "./components/Promise.svelte"
 
   export let name
 </script>
 
-<Card {name} />
+<Title {name} />
 <Promise />
