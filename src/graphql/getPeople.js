@@ -9,8 +9,9 @@ import gql from 'graphql-tag'
 module.exports.getPeople = (personName = '') => client.query({
   query: gql`
     query getPeople{
-      allPersons (filter: { name_contains: "${personName}" }){
+      people: allPersons (filter: { name_contains: "${personName}" }){
         name
+        gender
       }
     }`,
   })

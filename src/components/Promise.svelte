@@ -1,8 +1,10 @@
 <script>
-  const { getPeople } = require('../graphql/getPeople')
-  let name = ''
-  $: people = getPeople(name)
+  import Person from "./Person.svelte"
 
+  const { getPeople } = require('../graphql/getPeople')
+
+  let name = 'lu'
+  $: people = getPeople(name)
 </script>
 
 <div class="pure-form pure-form-stacked">
@@ -15,7 +17,9 @@
 {#await people}
   Loading...
 {:then result}
-  {JSON.stringify(result.data.allPersons, null, 2)}
+  {#each result.data.people as person}
+    <Person {...person} />
+  {/each}
 {:catch error}
   Error: {error}
 {/await}
