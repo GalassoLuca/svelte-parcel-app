@@ -8,13 +8,22 @@
     "dev": "parcel src/index.html",
     "start": "npm run dev",
     "build": "parcel build src/index.html",
-    "serve": "parcel serve src/index.html"
+    "serve": "parcel serve src/index.html",
+    "test": "jest src",
+    "test:watch": "npm run test -- --watch"
   },
+  "setupFilesAfterEnv": [
+    "@testing-library/jest-dom/extend-expect"
+  ],
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.0.2",
+    "@testing-library/svelte": "^1.11.0",
+    "jest": "^25.1.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-svelte": "^4.0.5",
     "sass": "^1.24.1",
-    "svelte": "^3.16.7"
+    "svelte": "^3.16.7",
+    "svelte-jester": "^1.0.3"
   },
   "dependencies": {
     "apollo-boost": "^0.4.7",

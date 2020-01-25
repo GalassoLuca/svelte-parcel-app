@@ -1,5 +1,5 @@
 <script>
-  export let name, gender
+  export let name, gender, __typename = ''
 
   const emojiByGender = {
     'MALE': '👱‍♂️',
