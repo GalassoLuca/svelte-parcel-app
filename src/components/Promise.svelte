@@ -1,18 +1,15 @@
 <script>
   const { getPeople } = require('../graphql/getPeople')
-  let people = getPeople()
   let name = ''
+  $: people = getPeople(name)
 
-  const handleChange = () => {
-    people = getPeople(name)
-  }
 </script>
 
 <div class="pure-form pure-form-stacked">
   <legend>Filter Star Wars people by the given name</legend>
 
   <label for="name">Name</label>
-  <input type="text"  placeholder="Name" bind:value={name} on:change={handleChange}>
+  <input type="text"  placeholder="Name" bind:value={name}>
 </div>
 
 {#await people}
